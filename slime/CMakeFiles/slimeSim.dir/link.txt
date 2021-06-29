@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/slimeSim.dir/main.cpp.o -o slimeSim  -lglfw -lpthread -lGLEW -lGLU -lGL -lrt -lXrandr -lXxf86vm -lXi -lXinerama -lX11 

@@ -32,9 +32,20 @@ void main (void) {
     vec4 blurResult = sum / 9;
     vec4 diffusedValue = mix(originalValue, blurResult, diffusedSpeed);
     vec4 evaporatedValue = max(vec4(0), diffusedValue - evaporateSpeed);
+    // vec4 blueMixed = evaporatedValue;
+
+    // if(evaporatedValue.g > 0.5) {
+    //     blueMixed = mix(evaporatedValue, vec4(0, 0, 0.4, 1), 0.1);
+    // }
+
+    // if(evaporatedValue.g > 0.7) {
+    //    evaporatedValue = vec4(0, 0, 0.5, 1);
+    // }
+
     // vec4 evaporatedValue = max(vec4(0), originalValue - vec4(0, evaporateSpeed, evaporateSpeed, 1));
 
     // vec4 pixel_color = vec4(1, 0, 0, 1);
 
+    // imageStore(texture, ivec2(coords), blueMixed);
     imageStore(texture, ivec2(coords), evaporatedValue);
 }

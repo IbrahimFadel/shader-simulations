@@ -1,0 +1,7 @@
+/home/ibrahim/dev/compute-shader-test/slime/CMakeFiles/install/strip.dir
+/home/ibrahim/dev/compute-shader-test/slime/CMakeFiles/install/local.dir
+/home/ibrahim/dev/compute-shader-test/slime/CMakeFiles/install.dir
+/home/ibrahim/dev/compute-shader-test/slime/CMakeFiles/list_install_components.dir
+/home/ibrahim/dev/compute-shader-test/slime/CMakeFiles/rebuild_cache.dir
+/home/ibrahim/dev/compute-shader-test/slime/CMakeFiles/edit_cache.dir
+/home/ibrahim/dev/compute-shader-test/slime/CMakeFiles/slimeSim.dir

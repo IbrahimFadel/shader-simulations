@@ -16,19 +16,33 @@ layout(std430, binding = 0) buffer SSBO
    Agent agents[ ];
 };
 
-
-float speed = 1;
-
 float PI = 3.14159265358979323846;
 float PHI = 1.61803398874989484820459;  // Φ = Golden Ratio   
 float gold_noise(vec2 xy, float seed){
        return fract(tan(distance(xy*PHI, xy)*seed)*xy.x);
 }
 
-float turnSpeed = 0.5;
-float sensorOffsetDst = 10;
-int sensorSize = 5;
-float sensorAngleSpacing = 20;
+// float speed = 3;
+// float turnSpeed = 0.5;
+// float sensorOffsetDst = 10;
+// int sensorSize = 5;
+// float sensorAngleSpacing = 20;
+
+// Settings A
+
+// float speed = 20;
+// float turnSpeed = 2;
+// float sensorOffsetDst = 35;
+// int sensorSize = 1;
+// float sensorAngleSpacing = 30;
+
+// Settings C
+
+float speed = 1;
+float turnSpeed = 3;
+float sensorOffsetDst = 20;
+int sensorSize = 1;
+float sensorAngleSpacing = 112;
 
 float sense(Agent agent, float sensorAngleOffset) {
         vec2 agentPos = vec2(agent.positionX, agent.positionY);
@@ -56,8 +70,8 @@ void main (void) {
         uint index = gl_GlobalInvocationID.x;
         Agent agent = agents[index];
         vec2 position = vec2(agent.positionX, agent.positionY);
-        vec4 pixelColor = vec4(0, 0.8, 0.5, 1);
-        // vec4 pixelColor = vec4(1);
+        // vec4 pixelColor = vec4(0, 0.8, 0.5, 1);
+        vec4 pixelColor = vec4(1);
 
         float hashedNum = gold_noise(position, 50);
 
